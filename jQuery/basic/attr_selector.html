@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script>
-	$(document).ready(function() {
-		$("#btn1").click(function() {
-			$("[href]").hide();
-		});
-		$("#btn2").click(function() {
-			$("a[target='_blank']").hide();
-		});
-		$("#btn3").click(function() {
-			$("a[target!='_blank']").hide();
-		});
-	});
-</script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("[href]").hide();
+            });
+            $("#btn2").click(function () {
+                $("a[target='_blank']").hide();
+            });
+            $("#btn3").click(function () {
+                $("a[target!='_blank']").hide();
+            });
+            //=
+            $("#btn4").click(function () {
+                $("input[value = 'alv']").hide();
+            });
+            //!=
+            $("#btn5").click(function(){
+                $("input[value != 'alv']").hide();
+            });
+            //$=
+            $("#btn6").click(function(){
+                $("input[value $= 'alv']").hide();
+            });
+            //|=
+            $("#btn7").click(function(){
+                $("input[value |= 'alv']").hide();
+            });
+            //^=
+            $("#btn8").click(function(){
+                $("input[value ^= 'alv']").hide();
+            });
+        });
+    </script>
 </head>
 
 <body>
-	<button id="btn1">Hide with attr name 'href'</button>
-	<button id="btn2">Hide with attr value equally</button>
-	<button id="btn3">Hide with attr value unequally</button>
-	
-	<h2>This is a heading</h2>
-	<p>This is a paragraph.</p>
-	<p>This is another paragraph.</p>
-	<a href="http://www.w3schools.com/html/" target="_blank">HTML Tutorial</a><p>
-	<a href="http://www.w3schools.com/css/">CSS Tutorial</a>
+<button id="btn1">Hide with attr name 'href'</button>
+<button id="btn2">Hide with attr value equally</button>
+<button id="btn3">Hide with attr value unequally</button><br>
+<button id="btn4">btn4, =</button>
+<button id="btn5">btn5, !=</button>
+<button id="btn6">btn6, $=</button>
+<button id="btn7">btn7, |=</button>
+<button id="btn8">btn8, ^=</button>
+<button id="btn9">btn9, ~=</button>
+<button id="btn10">btn10, *=</button>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+
+<p>This is another paragraph.</p>
+<a href="http://www.w3schools.com/html/" target="_blank">HTML Tutorial</a>
+
+<p>
+    <a href="http://www.w3schools.com/css/">CSS Tutorial</a><br>
+    =<input type="text" value="alvinchiou"><br>
+    !=<input type="text" value="alv in chiou"><br>
+    $=<input type="text" value="chiou in alv"><br>
+    |=<input type="text" value="alv"><br>
+    ^= <input type="text" value="alv-in-chiou"><br>
 </body>
 </html>
