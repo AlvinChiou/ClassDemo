@@ -4,7 +4,9 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#btn1").click(function () {
+        //邊載入邊執行，文字會先載入，圖片、影音檔則會一邊載入。因此間差!
+        //JavaScript onload 則是一次將所有元素load完畢才會開始執行。
+            $("#btn1").click(function () { //click表示綁定某個事件的意思
                 $("[href]").hide();
             });
             $("#btn2").click(function () {
