@@ -4,13 +4,14 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script>
 	$(document).ready(function() {
-		$(".ex .hide").click(function() {
-			$(this).parent(".ex").hide("slow");
+		$("button").click(function() {
+			$(this).next().toggle("slow");
+			//next()表示下一個元素，例如:按鈕button下一個元素就是一個<div>，因此當觸發this(當前元件)就會讓下一個元素被隱藏。
 		});
 	});
 </script>
 <style type="text/css">
-	div.ex {
+	div{
 		background-color: #e5eecc;
 		padding: 7px;
 		border: solid 1px #c3c3c3;
@@ -20,8 +21,8 @@
 
 <body>
 	<h3>Island Trading</h3>
-	<div class="ex">
-		<button class="hide">Hide me</button>
+    <button>Hide me</button>
+	<div>
 		<p>
 			Contact: Helen Bennett<br>
 			Garden House Crowther Way<br>
@@ -30,8 +31,8 @@
 	</div>
 
 	<h3>Paris speciality</h3>
-	<div class="ex">
-		<button class="hide">Hide me</button>
+    <button>Hide me</button>
+	<div>
 		<p>
 			Contact: Marie Bertrand<br>
 			265, Boulevard Charonne<br>

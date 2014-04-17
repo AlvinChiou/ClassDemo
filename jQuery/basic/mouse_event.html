@@ -4,17 +4,17 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script>
 	$(document).ready(function() {
-		$("#p1").mouseenter(function() {
+		$("#p1").mouseenter(function() { //滑鼠進入時發生作用
 			alert("You entered p1!");
 		});
-		$("#p2").mouseleave(function() {
+		$("#p2").mouseleave(function() { //滑鼠移開時發生作用
 			alert("Bye! You now leave p2!");
 		});
-		$("#p3").mousedown(function() {
+		$("#p3").mousedown(function() { //按下滑鼠發生作用
 			alert("Mouse down over p3!");
 		});
-		$("#p4").mouseup(function() {
-			alert("Mouse up over p4!");
+		$("#p4").mouseup(function() { //按下滑鼠並放開才發生作用
+            alert("Mouse up over p4!");
 		});
 	});
 </script>
